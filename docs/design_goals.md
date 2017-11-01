@@ -52,7 +52,7 @@ we can say that it is equivilant to
 and also
 
 ```json
-{"private":true,"devDependencies:["angular":"~3.4","underscore":"~5.9","gulp":"~3.9.1"]}
+{"private":true,"devDependencies":["angular":"~3.4","underscore":"~5.9","gulp":"~3.9.1"]}
 ```
 
 ### exhibit D (funky formatting)
@@ -61,9 +61,9 @@ and also
 
 ```json
 {
-	"private": true, "devDependencies:               [
+	"private": true, "devDependencies":    [
 		"angular": "~3.4",
-			"underscore": "~5.9",
+			"underscore": "~5.9" ,
 		"gulp": "~3.9.1"]
 	}
 ```
