@@ -22,12 +22,12 @@ Given the following cases:
 
 ```json
 {
-  "private": true,
-  "devDependencies: [
-    "angular": "~3.4",
-    "underscore": "~5.9",
-    "gulp": "~3.9.1"
-  ]
+	"private": true,
+	"devDependencies": [
+		"angular": "~3.4",
+		"underscore": "~5.9",
+		"gulp": "~3.9.1"
+	]
 }
 ```
 
@@ -37,12 +37,12 @@ we can say that it is equivilant to
 
 ```json
 {
-  "devDependencies: [
-    "angular": "~3.4",
-    "underscore": "~5.9",
-    "gulp": "~3.9.1"
-  ]
-  "private": true
+	"devDependencies": [
+		"angular": "~3.4",
+		"underscore": "~5.9",
+		"gulp": "~3.9.1"
+	]
+	"private": true
 
 }
 ```
@@ -61,11 +61,11 @@ and also
 
 ```json
 {
-  "private": true, "devDependencies:               [
-    "angular": "~3.4",
-      "underscore": "~5.9",
-    "gulp": "~3.9.1"]
-  }
+	"private": true, "devDependencies:               [
+		"angular": "~3.4",
+			"underscore": "~5.9",
+		"gulp": "~3.9.1"]
+	}
 ```
 
 From the point of view of our three observers, we can say that:
