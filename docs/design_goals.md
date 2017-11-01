@@ -14,20 +14,20 @@ Ductile should:
 
 ##  Intermediate data type
 
-As we convert to and from JSON while preserving structure, a need to support a superset of JSON seems to emerge. It's properties should be well-defined. Let's call this feature Structure Preserving JSON for now (SP-JSON for short). Additionally, we need to support annotations that inform how the object is formatted, but don't affect underlying data. Let's call that SP-JSON<sup>a</sup>.
+As we convert to and from JSON while preserving structure, a need to support a superset of JSON seems to emerge. It's properties should be well-defined. Let's call that Structure Preserving JSON. Additionally, we need to support annotations that inform how the object is formatted, but don't affect underlying data. Let's call that Annotated Structure Preserving JSON.
 
 Given the following cases:
 
-### exhibit A
+### exhibit A (well-formed JSON)
 
 ```json
 {
-	"private": true,
-	"devDependencies": [
-		"angular": "~3.4",
-		"underscore": "~5.9",
-		"gulp": "~3.9.1"
-	]
+  "private": true,
+  "devDependencies": [
+    "angular": "~3.4",
+    "underscore": "~5.9",
+    "gulp": "~3.9.1"
+  ]
 }
 ```
 
@@ -37,12 +37,12 @@ we can say that it is equivilant to
 
 ```json
 {
-	"devDependencies": [
-		"angular": "~3.4",
-		"underscore": "~5.9",
-		"gulp": "~3.9.1"
-	]
-	"private": true
+  "devDependencies": [
+    "angular": "~3.4",
+    "underscore": "~5.9",
+    "gulp": "~3.9.1"
+  ],
+  "private": true
 
 }
 ```
@@ -61,11 +61,11 @@ and also
 
 ```json
 {
-	"private": true, "devDependencies":    [
-		"angular": "~3.4",
-			"underscore": "~5.9" ,
-		"gulp": "~3.9.1"]
-	}
+  "private": true, "devDependencies":    [
+    "angular": "~3.4",
+      "underscore": "~5.9" ,
+    "gulp": "~3.9.1"]
+  }
 ```
 
 From the point of view of our three observers, we can say that:
@@ -80,3 +80,10 @@ From the point of view of our three observers, we can say that:
 - When viewing your changes using git or anything that leverages `diff`, you want as little noise as possible.
 - As a superset of JSON, SP-JSON may be appropriate for cases where you need a map, and the order of it's keys are important.
 - Similarily, you may need a data-structure that can support multiple instances of the same key with different values (think HTTP headers).
+
+##  Project Goal
+
+1. Build something useful
+2. Have fun learning Rust
+
+
